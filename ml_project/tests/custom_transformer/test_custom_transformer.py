@@ -53,7 +53,7 @@ class TestCustomTransformer(unittest.TestCase):
 
         self.assertEqual(X_transf_custom.shape, X_transf_default.shape)
         self.assertEqual(X_transf_custom.shape, (297, 28))
-        self.assertAlmostEquals(
+        self.assertAlmostEqual(
             np.linalg.norm(X_transf_default - X_transf_custom) ** 2, 0, 2
         )
 
