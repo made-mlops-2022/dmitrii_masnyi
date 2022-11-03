@@ -13,7 +13,7 @@ class TestDatasetCreation(unittest.TestCase):
         self.path_to_csv = 'data/heart_cleveland_upload.csv'
 
     def __assertIsFile(self):
-        if os.path.isfile(self.path_to_data):
+        if os.path.isfile({self.path_to_data}):
             raise AssertionError(f'File does not exist: {str(self.path_to_csv)}')
 
     def __assertIsDirectory(self):
@@ -25,11 +25,11 @@ class TestDatasetCreation(unittest.TestCase):
         self.__assertIsFile()
 
     def test_data_load(self):
-        data = read_data(f'../../{self.path_to_csv}')
+        data = read_data(self.path_to_csv)
         self.assertIsInstance(data, pd.DataFrame)
 
     def test_split(self):
-        data = read_data(f'../../{self.path_to_csv}')
+        data = read_data(self.path_to_csv)
         train, val = split_train_val_data(data, SplittingParams(val_size=0.3, random_state=42))
         self.assertEqual(train.shape, (207, 14))
         self.assertEqual(val.shape, (90, 14))
