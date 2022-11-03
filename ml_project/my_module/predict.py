@@ -5,6 +5,7 @@ from my_module.features import create_transformer
 from my_module.models import load_model, predict_model
 from my_module.entities import PredictPipelineParams, read_predict_pipeline_params
 
+
 def predict_pipeline(predict_pipeline_params: PredictPipelineParams) -> str:
     # logger.info(f"start predict pipeline with params {predict_pipeline_params}")
     data = read_data(predict_pipeline_params.input_data_path)
@@ -17,18 +18,18 @@ def predict_pipeline(predict_pipeline_params: PredictPipelineParams) -> str:
     model = load_model(predict_pipeline_params.model_path)
 
     predicts = predict_model(features, model)
-    pd.DataFrame(predicts).to_csv(predict_pipeline_params.output_data_path, index = False)
+    pd.DataFrame(predicts).to_csv(predict_pipeline_params.output_data_path, index=False)
     # logger.info(f"predict saved by {predict_pipeline_params.path_to_output}")
 
     return predict_pipeline_params.output_data_path
 
 
 @click.command
-@click.argument('path_to_config', type = click.Path(exists = True))
-def predict_pipeline_command(path_to_config: str = ''):
+@click.argument("path_to_config", type=click.Path(exists=True))
+def predict_pipeline_command(path_to_config: str = ""):
     params = read_predict_pipeline_params(path_to_config)
     predict_pipeline(params)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     predict_pipeline_command()
