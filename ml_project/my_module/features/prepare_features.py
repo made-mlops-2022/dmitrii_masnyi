@@ -14,6 +14,7 @@ def split_data_and_target(
     data = data_frame.drop(feature_params.target_col, axis=1)
     return data, target
 
+
 def create_transformer(feature_params: FeatureParams) -> Pipeline:
     if feature_params.transformer_type == 'custom':
         transformer = ColumnTransformer([

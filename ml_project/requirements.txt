@@ -10,6 +10,7 @@ decorator==5.1.1
 dill==0.3.6
 entrypoints==0.4
 executing==1.2.0
+flake8==5.0.4
 fonttools==4.38.0
 ipykernel==6.17.0
 ipython==8.6.0
@@ -39,6 +40,8 @@ prompt-toolkit==3.0.31
 psutil==5.9.3
 ptyprocess==0.7.0
 pure-eval==0.2.2
+pycodestyle==2.9.1
+pyflakes==2.5.0
 Pygments==2.13.0
 pylint==2.15.5
 pyparsing==3.0.9

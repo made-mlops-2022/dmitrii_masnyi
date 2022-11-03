@@ -23,6 +23,6 @@ my_module/models/__init__.py
 my_module/models/model_tools.py
 my_module/transformer/__init__.py
 my_module/transformer/custom_transformer.py
-test/__init__.py
-test/create_dataset/__init__.py
-test/create_dataset/test_create_dataset.py
+tests/__init__.py
+tests/create_dataset/__init__.py
+tests/create_dataset/test_create_dataset.py

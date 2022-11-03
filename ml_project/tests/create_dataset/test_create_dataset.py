@@ -30,7 +30,7 @@ class TestDatasetCreation(unittest.TestCase):
 
     def test_split(self):
         data = read_data(f'../../{self.path_to_csv}')
-        train, val = split_train_val_data(data, SplittingParams(val_size = 0.3,random_state = 42))
+        train, val = split_train_val_data(data, SplittingParams(val_size=0.3, random_state=42))
         self.assertEqual(train.shape, (207, 14))
         self.assertEqual(val.shape, (90, 14))
 

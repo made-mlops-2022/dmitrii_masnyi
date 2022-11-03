@@ -12,6 +12,7 @@ from my_module.entities import ModelParams
 
 ClassifierModel = Union[RandomForestClassifier, LogisticRegression]
 
+
 def train_model(features: pd.DataFrame,
                 target: pd.Series,
                 train_params: ModelParams) -> ClassifierModel:
@@ -24,8 +25,10 @@ def train_model(features: pd.DataFrame,
     model.fit(features, target)
     return model
 
+
 def predict_model(features: pd.DataFrame, model: ClassifierModel) -> np.ndarray:
     return model.predict(features)
+
 
 def evaluate_model(predicts: np.ndarray, target: pd.Series) -> Dict[str, float]:
     metrics = {}
@@ -35,10 +38,12 @@ def evaluate_model(predicts: np.ndarray, target: pd.Series) -> Dict[str, float]:
     metrics['precision_score'] = precision_score(target, predicts)
     return metrics
 
+
 def save_model(model: ClassifierModel, path_to_save: str) -> str:
     with open(path_to_save, 'wb') as file:
         pickle.dump(model, file)
     return path_to_save
+
 
 def load_model(path_to_load: str) -> ClassifierModel:
     with open(path_to_load, 'rb') as file:
