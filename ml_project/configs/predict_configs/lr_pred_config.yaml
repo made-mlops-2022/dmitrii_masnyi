@@ -1,0 +1,50 @@
+input_data_path: 'data/heart_cleveland_upload.csv'
+split_train_data_path: 'data/split_data/heart_cleveland_upload_train_log_reg.csv'
+split_test_data_path: 'data/split_data/heart_cleveland_upload_test_log_reg.csv'
+output_model_path: 'models/log_reg_model.pkl'
+metric_path: 'models/log_reg_model_test_metrics.json'
+
+feature_params:
+  categorical_features:
+    - 'sex'
+    - 'cp'
+    - 'fbs'
+    - 'restecg'
+    - 'exang'
+    - 'slope'
+    - 'ca'
+    - 'thal'
+  numerical_features:
+    - 'age'
+    - 'trestbps'
+    - 'chol'
+    - 'thalach'
+    - 'oldpeak'
+  features_to_drop: []
+  transformer_type: 'default'
+
+input_data_path: 'data/heart_cleveland_upload.csv'
+output_data_path: 'predicts/rf_predictions.csv'
+model_path: 'models/rf_model.pkl'
+
+feature_params:
+  categorical_features:
+    - 'sex'
+    - 'cp'
+    - 'fbs'
+    - 'restecg'
+    - 'exang'
+    - 'slope'
+    - 'ca'
+    - 'thal'
+  numerical_features:
+    - 'age'
+    - 'trestbps'
+    - 'chol'
+    - 'thalach'
+    - 'oldpeak'
+  features_to_drop: []
+  target_col: 'condition'
+  transformer_type: ''
+
+
