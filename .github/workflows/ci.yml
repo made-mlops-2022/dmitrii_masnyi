@@ -46,4 +46,4 @@ jobs:
       - name: Test with unittest
         run: |
             cd ml_project
-            if [ -d "tests" ]; then python3 -m unitest tests; fi
+            if [ -d "tests" ]; then python3 -m unittest tests; fi
