@@ -26,3 +26,7 @@ my_module/transformer/custom_transformer.py
 tests/__init__.py
 tests/create_dataset/__init__.py
 tests/create_dataset/test_create_dataset.py
+tests/custom_transformer/__init__.py
+tests/custom_transformer/test_custom_transformer.py
+tests/features_preproc/__init__.py
+tests/features_preproc/test_features_preproc.py
