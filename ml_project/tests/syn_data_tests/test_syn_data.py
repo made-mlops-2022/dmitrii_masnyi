@@ -54,7 +54,7 @@ class TestSyntData(unittest.TestCase):
         pred_params.output_data_path = "predicts/synt_data.csv"
         predict_pipeline(pred_params)
         pred = pd.read_csv("predicts/synt_data.csv")
-        self.assertEquals(pred.iloc[0, 0] == 0 or pred.iloc[0, 0] == 1, True)
+        self.assertEqual(pred.iloc[0, 0] == 0 or pred.iloc[0, 0] == 1, True)
         self.assertEqual(len(pred), 1)
         self.assertIsInstance(pred, pd.DataFrame)
 
