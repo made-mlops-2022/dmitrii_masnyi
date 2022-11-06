@@ -1,12 +1,8 @@
 import unittest
 import os
 import json
-from my_module.features import split_data_and_target, create_transformer
-from my_module.data import read_data
-from my_module.entities import (
-    FeatureParams,
-    read_training_pipeline_params,
-)
+from my_module.entities import read_training_pipeline_params
+
 from my_module.train import train_pipeline
 
 
