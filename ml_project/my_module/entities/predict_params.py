@@ -11,6 +11,7 @@ class PredictPipelineParams:
     output_data_path: str
     model_path: str
     feature_params: FeatureParams
+    data_for_transform: str
 
 
 PredictPipelineParamsSchema = class_schema(PredictPipelineParams)

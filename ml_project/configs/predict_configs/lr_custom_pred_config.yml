@@ -1,7 +1,7 @@
 input_data_path: 'data/test_data/test.csv'
-output_data_path: 'predicts/log_reg_predictions.csv'
+output_data_path: 'predicts/log_reg_custom_predictions.csv'
 data_for_transform: 'data/heart_cleveland_upload.csv'
-model_path: 'models/log_reg_model.pkl'
+model_path: 'models/log_reg_custom_model.pkl'
 
 feature_params:
   categorical_features:
@@ -21,6 +21,6 @@ feature_params:
     - 'oldpeak'
   features_to_drop: []
   target_col: 'condition'
-  transformer_type: 'default'
+  transformer_type: 'custom'
 
 

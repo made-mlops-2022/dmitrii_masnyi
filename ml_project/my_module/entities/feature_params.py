@@ -8,4 +8,4 @@ class FeatureParams:
     numerical_features: List[str]
     features_to_drop: List[str]
     target_col: Optional[str]
-    transformer_type: str
+    transformer_type: Optional[str]

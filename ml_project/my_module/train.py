@@ -38,6 +38,7 @@ def train_pipeline(
     logger.info(f"val_df.shape is {val_df.shape}")
 
     transformer = create_transformer(train_pipeline_params.feature_params)
+
     train_features = transformer.fit_transform(train_df)
     logger.info(f"train_features.shape is {train_features.shape}")
 
@@ -46,6 +47,7 @@ def train_pipeline(
     )
 
     val_features = transformer.transform(val_df)
+
     predicts = predict_model(val_features, model)
 
     metrics = evaluate_model(predicts, val_target)

@@ -2,7 +2,6 @@ from dataclasses import dataclass
 from marshmallow_dataclass import class_schema
 import yaml
 
-# from .download_params import DownloadParams
 from .split_params import SplittingParams
 from .feature_params import FeatureParams
 from .model_params import ModelParams
