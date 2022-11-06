@@ -17,7 +17,7 @@ logger.addHandler(handler)
 def predict_pipeline(predict_pipeline_params: PredictPipelineParams) -> str:
     logger.info(f"start predict pipeline with params {predict_pipeline_params}")
     data = read_data(predict_pipeline_params.input_data_path)
-    ### нужно чтобы преобразование было детерменировано
+    ### нужно чтобы преобразование тестовых данных было детерменировано
     train_data = read_data(predict_pipeline_params.data_for_transform)
     train_data, _ = split_data_and_target(
         train_data, predict_pipeline_params.feature_params
