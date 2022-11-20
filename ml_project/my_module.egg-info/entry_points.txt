@@ -1,0 +1,2 @@
+[console_scripts]
+ml_example_train = my_module.train:train_pipeline_command
