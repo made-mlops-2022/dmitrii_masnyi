@@ -44,11 +44,10 @@ def make_predict(data, features):
 def load_model():
     global model
     global transformer
-    # model_path = os.getenv("PATH_TO_MODEL")
-    # transformer_path = os.getenv("PATH_TO_TRANSFORMER")
+    
+    model_path = os.getenv("PATH_TO_MODEL")
+    transformer_path = os.getenv("PATH_TO_TRANSFORMER")
 
-    model_path = "model.pkl" # debug
-    transformer_path = "transformer.pkl" # debug
     for elem in [model_path, transformer_path]:
         if elem is None:
             logger.error(f"{elem} is None")

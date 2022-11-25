@@ -2,7 +2,7 @@
 ### Build docker image:
 cd to `online_inference/`, then run:
 ```
-docker build --tag dmasny99/online_inference:v1 .   
+docker build --tag dmasny99/online_inference:v2 .   
 ```
 
 or pull from dockerhub:
@@ -12,7 +12,7 @@ docker pull dmasny99/online_inference:v1
 
 ### Run container
 ```
-docker run -p 8000:8000 dmasny99/online_inference:v1
+docker run -p 8000:8000 dmasny99/online_inference:v2
 ```
 Server binds 8000 port on local host by docker configuration.
 
