@@ -7,7 +7,7 @@ docker build --tag dmasny99/online_inference:v2 .
 
 or pull from dockerhub:
 ```
-docker pull dmasny99/online_inference:v1
+docker pull dmasny99/online_inference:v2
 ```
 
 ### Run container
