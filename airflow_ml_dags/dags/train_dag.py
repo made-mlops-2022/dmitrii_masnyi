@@ -41,7 +41,7 @@ with DAG(
     split_data = DockerOperator(
         image="airflow-split",
         command=f"--input-dir={RAW_PATH} --output-dir={PROCESSED_PATH}",
-        # network_mode="bridge",
+        network_mode="bridge",
         task_id="docker-airflow-split",
         do_xcom_push=False,
         mount_tmp_dir=False,
