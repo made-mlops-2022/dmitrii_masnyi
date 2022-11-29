@@ -1,13 +1,13 @@
+import datetime
 from airflow import DAG
 from airflow.providers.docker.operators.docker import DockerOperator
-from airflow.utils.dates import days_ago
 from docker.types import Mount
 
 from configs import default_args, SOURCE, TARGET, RAW_PATH
 
 with DAG(
         dag_id="get_data",
-        start_date=days_ago(5),
+        start_date=datetime.datetime(2022, 11, 29),
         schedule_interval="@daily",
         default_args=default_args,
         tags = ["HW3 mlops"],
